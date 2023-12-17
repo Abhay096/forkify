@@ -1,0 +1,27 @@
+#tooling {
+    width: 23em;
+    background-color: white;
+    height: 52em;
+    border-bottom-left-radius: 10px;
+    overflow-y: scroll;
+}
+
+#tooling div:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+#tooling button {
+    color: rgb(255, 147, 59);
+    border-radius: 50px;
+    background-color: rgb(239, 239, 239);
+    border: 0px;
+    padding: 5px 8px;
+    cursor: pointer;
+    position: relative;
+    top: 47rem;
+    left: 17rem;
+}
+
+#tooling button:hover {
+    background-color: hsl(0, 0%, 89%);
+}

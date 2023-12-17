@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forkify</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="tooling.css">
+    <link rel="stylesheet" href="display.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <div id="main_div">
+        <header id="header">
+            <div id="logo">
+                <img src="https://forkify-v2.netlify.app/logo.09084f39.png" alt="logo">
+            </div>
+            <div id="search_bar">
+                <input id="search_input" type="text" placeholder="Search over 10,00,000 recepies..."
+                    onkeypress="key_enter(event)">
+                <button id="search_button"><img width="15" height="15"
+                        src="https://img.icons8.com/ios-filled/50/FFFFFF/search--v1.png" alt="search--v1" />
+                    SEARCH</button>
+            </div>
+            <div id="add_recepie">
+                <button>
+                    <img width="32" height="32" src="https://img.icons8.com/pastel-glyph/64/FD7E14/multi-edit.png"
+                        alt="multi-edit" />
+                    <span>ADD RECEPIE</span>
+                </button>
+            </div>
+            <div id="bookmark">
+                <button onclick="show_bookmark()">
+                    <img width="32" height="32"
+                        src="https://img.icons8.com/fluency-systems-regular/48/FD7E14/bookmark-ribbon--v1.png"
+                        alt="bookmark-ribbon--v1" />
+                    <span>BOOKMARKS</span>
+                </button>
+            </div>
+        </header>
+
+        <section id="sec">
+            <div id="tooling">
+
+            </div>
+            <div id="display">
+                <h1 id="title"><span id="inside_title"></span></h1>
+                <h3 id="greetings">
+                    <div><img width="34" height="34" src="https://img.icons8.com/glyph-neue/64/FAB005/happy.png"
+                            alt="happy" /></div>
+                    <div>Start by searching for a recipe or an ingredient. Have fun!</div>
+                </h3>
+
+                <div id="image_div">
+                    <img id="display_image" src="" alt="">
+                </div>
+
+                <div id="duration_header">
+                    <span id="clock_icon">
+                        <img style="margin: 0%;" width="30" height="30"
+                            src="https://img.icons8.com/ios-glyphs/30/FD7E14/clock--v1.png" alt="clock--v1" />
+                    </span>
+                    <span id="timing"></span>
+                    <span id="people_icon"><img style="margin: 0%;" width="30" height="30"
+                            src="https://img.icons8.com/pastel-glyph/64/FD7E14/person-male--v3.png"
+                            alt="person-male--v3" /></span>
+                    <span id="serving"><span id="serving_num"></span> Servings</span>
+                    <span id="inc_dec">
+                        <img id="decrease" style="margin: 0%;" width="20" height="20"
+                            src="https://img.icons8.com/ios/50/FD7E14/minus.png" alt="minus" />
+                        <img id="increase" style="margin: 0%;" width="20" height="20"
+                            src="https://img.icons8.com/ios/50/FD7E14/add--v1.png" alt="add--v1" />
+                    </span>
+                    <span id="bookmark_logo" onclick="bookmark_content()">
+                        <img style="margin: 0%;" width="50" height="50"
+                            src="https://img.icons8.com/sf-black-filled/64/FD7E14/bookmark-ribbon.png"
+                            alt="bookmark-ribbon" />
+                    </span>
+                </div>
+                <div id="heading_div"
+                    style="color: rgb(255, 68, 0); text-align: center; font-size: 1.3em;font-weight: bold; padding-left: 2em; padding-right: 2em;">
+                    RECEPIE INGREDIENT</div>
+                <div id="ingredient">
+                    <div id="div1"></div>
+                    <div id="div2"></div>
+                </div>
+                <div id="source">
+                    <h2 id="source_heading">HOW TO COOK IT</h2>
+                    <h4 id="source_para"></h4>
+                    <button id="source_btn"><a id="source_a" href="">Direction</a></button>
+                </div>
+            </div>
+            <div id="bookmark_div">
+
+            </div>
+        </section>
+    </div>
+    <div id="modal">
+        <div style="display:flex;flex-direction: row;justify-content: space-evenly;">
+            <div id="recipe_data">
+                <h2>RECIPE DATA</h2>
+                <label for="" style="margin-right: 5em;">Title</label>
+                <input type="text" placeholder="TEST23"><br>
+                <label for="" style="margin-right: 4.8em;">URL</label>
+                <input type="text" placeholder="TEST23"><br>
+                <label for="" style="margin-right: 2.1em;">Image URL</label>
+                <input type="text" placeholder="TEST23"><br>
+                <label for="" style="margin-right: 3.1em;">Publisher</label>
+                <input type="text" placeholder="TEST23"><br>
+                <label for="" style="margin-right: 2.8em;">Prep Time</label>
+                <input type="number" placeholder="23"><br>
+                <label for="" style="margin-right: 3.4em;">Servings</label>
+                <input type="number" placeholder="23"><br>
+            </div>
+            <div>
+                <h2>INGREDIENTS</h2>
+                <label for="" style="margin-right: 2em;">Ingredient 1</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+                <label for="" style="margin-right: 2em;">Ingredient 2</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+                <label for="" style="margin-right: 2em;">Ingredient 3</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+                <label for="" style="margin-right: 2em;">Ingredient 4</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+                <label for="" style="margin-right: 2em;">Ingredient 5</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+                <label for="" style="margin-right: 2em;">Ingredient 6</label>
+                <input type="text" placeholder="Quantity, Unit, Description"><br>
+            </div>
+            <div style="width: 0.1em;">
+                <img style="cursor: pointer;" width="30" height="30" onclick="show_modal()"
+                    src="https://img.icons8.com/ios-glyphs/30/FD7E14/multiply.png" alt="multiply" />
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button onclick="recipe_upload()"
+                style="width: 8em;color: white;background-color: rgb(255, 115, 65);border: 0px;border-radius: 50px;font-size: 1.2em;font-weight: 700;padding: 0.7em;cursor: pointer;">Upload</button>
+        </div>
+    </div>
+    <script src="api.js"></script>
+</body>
+
+</html>

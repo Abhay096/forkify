@@ -1,0 +1,55 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #sec {
+        display: none;
+    }
+
+    #main_div {
+        margin: 10px 0px 10px 0px;
+    }
+
+    #header {
+        flex-wrap: wrap;
+    }
+
+    #logo {
+        text-align: center;
+    }
+
+    #logo img {
+        height: 17px;
+        width: 46px;
+    }
+
+    #search_bar input {
+        height: 10px;
+        width: 202px;
+        border-radius: 50px;
+        padding: 7px 7px 7px 7px;
+        border: 1px solid white;
+        font-size: small;
+
+    }
+
+    #search_bar button {}
+
+    #bookmark {
+        display: none;
+    }
+
+    #add_recepie {
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
